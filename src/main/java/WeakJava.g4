@@ -175,5 +175,9 @@ INTEGER: [0-9][0-9]*;
 // Variable names
 IDENT: [a-zA-Z0-9_]+;
 
+LineComment
+    :   '//' ~[\r\n]*
+        -> skip
+    ;
 // Ignore all white spaces
 WS: [ \t\r\n]+ -> skip ;
