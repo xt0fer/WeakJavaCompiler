@@ -1,7 +1,7 @@
 class Project {
     int main() {
         int i;
-        i = 0;
-        return i;
+        i = 14;
+        print i;
     }
 }
