@@ -14,4 +14,4 @@ compile: generate
 	javac -cp .:$(antlr4) -d $(TARGET) $(TARGET)/main/java/Groundz*.java $(srcs)/zas/*.java
 
 test: compile
-	java  -cp .:$(antlr4):$(TARGET) org.antlr.v4.runtime.misc.TestRig Groundz program grzero.wj
+	java  -cp .:$(antlr4):$(TARGET) org.antlr.v4.runtime.misc.TestRig Groundz compilationunit grzero.wj
