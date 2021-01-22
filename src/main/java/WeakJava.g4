@@ -4,7 +4,7 @@ grammar WeakJava;
 
 // Root non-terminal symbol
 // A program is a bunch of declarations followed by a bunch of statements
-// The Java code outputs the necessary NASM code around these declarations
+// The Java code outputs the necessary ZAS assembler code around these declarations
 
 @parser::header {
     import zas.CodeList;
@@ -35,6 +35,7 @@ mainfunction :
     }
     declaration*
     // add postamble, pop result of return, and Halt
+    {program.add(new Label("_main", "// data section"));}
     statement*
     {
     program.add(new Label("_quit", ""));

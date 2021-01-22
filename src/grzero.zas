@@ -1,10 +1,11 @@
-.OR     0x0000
+.OR 0x0000
         BRA _stackbase
 vars:   // data section
 a:      // variable
-.WD     0
+.WD 0
 b:      // variable
-.WD     0
+.WD 0
+_main:  // data section
         ADDI x8 x0 3
         ST x8 a
         LD x8 a
@@ -36,7 +37,7 @@ _quit:
         POP xFP
         OUT xFP
         HLT
-.OR     0x7000
+.OR 0x7000
 _stackbase:     // base of stack
         LDI x5 _stackbase
         MOV xFP x5

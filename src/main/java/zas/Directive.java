@@ -8,7 +8,7 @@ public class Directive implements ZasLine {
         this.args = args;
     }
     public String emit() {
-        String line = String.format("%s\t", directive);
+        String line = String.format("%s ", directive);
         for (String s : args) {
             line = line + s + " ";
         }
