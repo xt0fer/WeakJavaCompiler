@@ -1,0 +1,8 @@
+// smallest wj program.
+class Project {
+
+    int main() {
+        return 0;
+    }
+
+}

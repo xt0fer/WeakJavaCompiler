@@ -7,11 +7,11 @@ antlr4command=java -cp $(antlr4) org.antlr.v4.Tool
 TARGET=../target
 
 
-generate: $(srcs)/Groundz.g4
-	$(antlr4command) -o $(TARGET) $(srcs)/Groundz.g4
+generate: $(srcs)/WeakJava.g4
+	$(antlr4command) -o $(TARGET) $(srcs)/WeakJava.g4
 
 compile: generate
-	javac -cp .:$(antlr4) -d $(TARGET) $(TARGET)/main/java/Groundz*.java $(srcs)/zas/*.java
+	javac -cp .:$(antlr4) -d $(TARGET) $(TARGET)/main/java/WeakJava*.java $(srcs)/zas/*.java
 
 test: compile
-	java  -cp .:$(antlr4):$(TARGET) org.antlr.v4.runtime.misc.TestRig Groundz compilationunit grzero.wj
+	java  -cp .:$(antlr4):$(TARGET) org.antlr.v4.runtime.misc.TestRig WeakJava compilationunit grzero.wj

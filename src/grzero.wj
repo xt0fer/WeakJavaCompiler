@@ -1,4 +1,5 @@
-main {
+// a weak java program
+main () {
     int a;
     int b;
     a = 3;
